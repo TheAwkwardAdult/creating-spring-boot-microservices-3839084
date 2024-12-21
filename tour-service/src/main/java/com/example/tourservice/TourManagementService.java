@@ -1,7 +1,9 @@
 package com.example.tourservice;
 
 import com.example.tourservice.utilities.TourRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TourManagementService {
     private TourRepository tourRepository;
 
@@ -14,7 +16,7 @@ public class TourManagementService {
         createTour("Kids L.A. Tour", 100, true);
         createTour("Islands of the Blue Dolphins Tour", 200, true);
         createTour("Endangered Specie Expedition", 250, true);
-    } 
+    }
 
     public Tour createTour(String title, Integer price, Boolean isKidFriendly) {
         return tourRepository.save(new Tour(title, price, isKidFriendly));
