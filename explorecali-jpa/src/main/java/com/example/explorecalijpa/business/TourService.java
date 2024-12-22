@@ -33,11 +33,17 @@ public class TourService {
   }
 
   public List<Tour> lookupByDifficulty(Difficulty difficulty) {
-    return Collections.emptyList();
+    //Enter Difficulty level selected by user
+    // Check the difficulty level against all the available difficulty level
+    //return the list of tours that come under the difficulty level that matches user choice
+    return tourRepository.findByDifficulty(difficulty);
   }
 
   public List<Tour> lookupByPackage(String tourPackageCode) {
-    return Collections.emptyList();
+    //Enter package level selected by user
+    // Check the package level against all the available difficulty level
+    //return the list of tours that come under the difficpackageulty level that matches user choice
+    return tourRepository.findByTourPackage(tourPackageCode);
   }
 
   public long total() {
