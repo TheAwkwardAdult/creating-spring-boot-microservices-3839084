@@ -84,11 +84,15 @@
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
-				<version>3.4.0</version>
+				<version>3.4.4</version>
 				<configuration>
 					<from>
 						<image>eclipse-temurin:21-jre-ubi9-minimal</image>
 					</from>
+					<to>
+						<image>docker.io/fsamad28/explorecali:latest</image>
+						<credHelper>settings</credHelper>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
